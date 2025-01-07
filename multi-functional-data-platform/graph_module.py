@@ -6,3 +6,6 @@ def create_dag(edges):
     if not nx.is_directed_acyclic_graph(graph):
         raise ValueError("The graph contains cycles.")
     return graph
+def topological_sort(graph):
+    """Performs topological sorting on the DAG."""
+    return list(nx.topological_sort(graph))
